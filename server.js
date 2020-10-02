@@ -1,11 +1,14 @@
+
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
 async function main() {
+  const dinner = process.env.DINNER_TONIGHT;
   while(true) {
-    console.log('Containers rule!');
-    await sleep(4000);
+    console.log("Dinner tonight will be ", dinner)
+    console.log("Microservices rock!");
+    await sleep(5000);
   }
 }
 
