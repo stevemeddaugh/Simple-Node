@@ -20,7 +20,7 @@ before_script:
 
 script:
   - docker --version # print the version for logging
-  - docker build -t simple-node .
+  - docker build -t simple-node --build-arg DINNER_TONIGHT=${DINNER_TONIGHT} .
   - docker tag simple-node smeddaugh/simple-node:latest
 
 after_success:
